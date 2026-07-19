@@ -2129,6 +2129,36 @@ textarea {
     width: 100%;
   }
 
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--header-h) + 3.4rem);
+    padding-bottom: 4.5rem;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 1rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero__subtitle {
+    margin-bottom: 1.6rem;
+    line-height: 1.62;
+  }
+
+  .hero__actions { margin-bottom: 2rem; }
+
+  .hero__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.2rem;
+    padding-top: 1.35rem;
+  }
+
+  .hero__stats li:last-child { grid-column: span 2; }
+  .hero__stats strong { font-size: 1.25rem; }
+  .hero__scroll { display: none; }
+
   .hero-quote {
     grid-template-columns: 1fr 1fr;
     padding: 0.8rem;
@@ -2230,6 +2260,62 @@ textarea {
   .hero__title {
     font-size: 2.2rem;
   }
+
+  .hero {
+    padding-top: calc(var(--header-h) + 2.5rem);
+    padding-bottom: 3.25rem;
+  }
+
+  .hero__stats {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .hero__stats li:last-child { grid-column: auto; }
+
+  .hero-quote {
+    margin-top: 1.35rem;
+    gap: 0.5rem;
+  }
+
+  .hero-quote__intro small { display: none; }
+
+  .review-bar__inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.7rem 0.85rem;
+  }
+
+  .review-bar p { width: auto; }
+  .review-bar__link,
+  .review-bar__instagram { grid-column: span 2; }
+
+  .business-card { width: 100%; }
+
+  .corporate-hero {
+    min-height: auto;
+    padding-top: calc(var(--header-h) + 3.1rem);
+    padding-bottom: 4rem;
+  }
+
+  .corporate-hero__actions .btn { width: 100%; }
+  .corporate-hero__proof { flex-direction: column; gap: 0.45rem; }
+
+  .corporate-solutions__grid { grid-template-columns: 1fr; }
+
+  .corporate-solutions__grid article,
+  .corporate-solutions__grid article:nth-child(2) {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .corporate-solutions__grid article:last-child { border-bottom: 0; }
+
+  .corporate-proposal__box { padding: 1.35rem; }
+  .corporate-form { grid-template-columns: 1fr; }
+  .corporate-form label:nth-child(3),
+  .corporate-form label:nth-child(4),
+  .corporate-form button { grid-column: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
