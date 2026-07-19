@@ -2195,7 +2195,14 @@ textarea {
   }
 
   .service-experience__image-wrap {
-    min-height: 390px;
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+    background: var(--void);
+  }
+
+  .service-experience__image-wrap img {
+    object-fit: contain;
+    object-position: center;
   }
 
   .form-row {
