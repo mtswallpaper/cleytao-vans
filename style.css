@@ -275,6 +275,27 @@ textarea {
   color: var(--gold);
 }
 
+@media (min-width: 900px) {
+  .logo {
+    gap: 0.95rem;
+  }
+
+  .logo__monogram {
+    width: 62px;
+    height: 62px;
+    border-radius: 18px 5px 18px 5px;
+    font-size: 1.42rem;
+  }
+
+  .logo__text strong {
+    font-size: 1.34rem;
+  }
+
+  .logo__text em {
+    font-size: 0.78rem;
+  }
+}
+
 .nav {
   display: flex;
   align-items: center;
