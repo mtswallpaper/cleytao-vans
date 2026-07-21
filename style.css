@@ -1153,11 +1153,6 @@ textarea {
   filter: brightness(1);
 }
 
-.gallery-item--video video {
-  background: #050507;
-  filter: none;
-}
-
 .gallery-item figcaption {
   position: absolute;
   inset: auto 0 0 0;
