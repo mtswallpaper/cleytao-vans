@@ -1139,7 +1139,8 @@ textarea {
   border: 1px solid var(--border);
 }
 
-.gallery-item img {
+.gallery-item img,
+.gallery-item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1150,6 +1151,11 @@ textarea {
 .gallery-item:hover img {
   transform: scale(1.06);
   filter: brightness(1);
+}
+
+.gallery-item--video video {
+  background: #050507;
+  filter: none;
 }
 
 .gallery-item figcaption {
@@ -1407,7 +1413,7 @@ textarea {
   inset: 0;
   background:
     linear-gradient(105deg, rgba(5, 5, 7, 0.94), rgba(10, 10, 13, 0.88)),
-    url("./Cleytao%20Vans/f.jpeg") center / cover no-repeat;
+    url("./Cleytao%20Vans/f-sem-placa.png") center / cover no-repeat;
   filter: brightness(0.7);
 }
 
@@ -1806,7 +1812,7 @@ textarea {
 .corporate-hero__bg,
 .corporate-hero__overlay { position: absolute; inset: 0; }
 .corporate-hero__bg {
-  background: url("./Cleytao%20Vans/WhatsApp%20Image%202026-07-17%20at%2003.06.58.jpeg") center / cover no-repeat;
+  background: url("./Cleytao%20Vans/duas-vans-sem-placas.png") center / cover no-repeat;
   filter: brightness(0.56) saturate(0.85);
   transform: scale(1.03);
 }
