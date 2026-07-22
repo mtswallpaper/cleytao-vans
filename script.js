@@ -14,7 +14,18 @@
 
   const openWhatsApp = (lines) => {
     const text = encodeURIComponent(lines.join("\n"));
-    window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, "_blank", "noopener");
+    const url = `https://wa.me/${WA_NUMBER}?text=${text}`;
+    const openUrl = () => window.open(url, "_blank", "noopener");
+
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "contato", {
+        event_callback: openUrl,
+        event_timeout: 2000,
+      });
+      return;
+    }
+
+    openUrl();
   };
 
   /* Ano no rodapé */

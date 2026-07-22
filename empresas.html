@@ -10,6 +10,23 @@
 
     gtag('config', 'G-862HBFRDZR');
   </script>
+  <!-- Google tag (gtag.js) event - delayed navigation helper -->
+  <script>
+    // Helper function to delay opening a URL until a gtag event is sent.
+    // Call it in response to an action that should navigate to a URL.
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'contato', {
+        'event_callback': callback,
+        'event_timeout': 2000
+      });
+      return false;
+    }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cleytão Vans para empresas: transporte recorrente de equipes, executivos, clientes e eventos em São Paulo e ABC.">
@@ -34,7 +51,7 @@
         <a href="./index.html#frota">Frota</a>
         <a href="./index.html#depoimentos">Clientes</a>
         <a class="nav__active" href="./empresas.html">Empresas</a>
-        <a class="btn btn--sm btn--whatsapp" href="https://wa.me/551120182421?text=Olá!%20Quero%20conhecer%20as%20soluções%20corporativas%20da%20Cleytão%20Vans." target="_blank" rel="noopener">Falar com comercial</a>
+        <a class="btn btn--sm btn--whatsapp" href="https://wa.me/551120182421?text=Olá!%20Quero%20conhecer%20as%20soluções%20corporativas%20da%20Cleytão%20Vans." target="_blank" rel="noopener" onclick="return gtagSendEvent(this.href);">Falar com comercial</a>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -108,7 +125,7 @@
   </main>
 
   <footer class="footer"><div class="container footer__bottom"><p>© <span id="year"></span> Cleytão Vans. Mobilidade corporativa em São Paulo e ABC.</p><a href="./index.html">Voltar ao site principal</a></div></footer>
-  <a class="whatsapp-float" href="https://wa.me/551120182421?text=Olá!%20Quero%20uma%20proposta%20corporativa%20da%20Cleytão%20Vans." target="_blank" rel="noopener" aria-label="WhatsApp Cleytão Vans">✦</a>
+  <a class="whatsapp-float" href="https://wa.me/551120182421?text=Olá!%20Quero%20uma%20proposta%20corporativa%20da%20Cleytão%20Vans." target="_blank" rel="noopener" aria-label="WhatsApp Cleytão Vans" onclick="return gtagSendEvent(this.href);">✦</a>
   <script src="script.js"></script>
 </body>
 </html>
